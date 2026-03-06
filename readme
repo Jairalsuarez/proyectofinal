@@ -1,0 +1,20 @@
+# Windbnb
+
+Para construir este proyecto, me enfoqué en usar las siguientes herramientas:
+
+* HTML: Lo usé para crear la estructura básica de la página web y organizar todo el texto, las imágenes y los botones.
+* Tailwind CSS: Lo elegí para darle estilo al proyecto. Me permitió diseñar la página de forma rápida y asegurar que se vea bien y se adapte automáticamente a cualquier tamaño de pantalla, ya sea un teléfono celular o una computadora.
+* JavaScript: Lo utilicé para darle vida a la página. Con este lenguaje programé toda la interactividad, como hacer que los menús se abran y escribir la lógica matemática para buscar y filtrar los alojamientos en tiempo real.
+
+
+### 1. Filtrar elementos sin repetir (map y Set)
+Cuando necesito obtener una lista de ciudades sin que se repitan, utilizo `map` y `Set`. Primero, con `map` recorro toda la información y extraigo únicamente los nombres de los lugares. Después, paso esa lista por un `Set`. Me gusta ver el `Set` como un filtro inteligente que solo deja pasar elementos únicos; si detecta una ciudad que ya pasó, simplemente la ignora. Finalmente, uso los tres puntos (`...`) para sacar esos nombres del filtro y armar mi lista final y limpia.
+
+### 2. Búsqueda al instante (keyup)
+Para lograr que el buscador funcione exactamente mientras escribo, decidí usar el evento `keyup`. Esto le indica al navegador que debe reaccionar en el instante preciso en que levanto el dedo de la tecla. De esta manera, mi código captura cada letra nueva al momento y actualiza la pantalla sin tener que esperar a presionar Enter.
+
+### 3. El paquete de información (e o evento)
+Cada vez que una persona interactúa con la página, como al hacer clic o escribir, el navegador genera automáticamente un paquete de información sobre esa acción. En mi código llamo a este paquete `evento` o `e`. Al abrir y leer este paquete, puedo saber detalles exactos, como en qué parte de la pantalla hizo clic la persona o qué palabra acaba de ingresar en el buscador.
+
+### 4. Filtrar por varias reglas a la vez
+Para mostrar los resultados correctos cuando alguien busca un alojamiento, utilizo una herramienta llamada `filter`. Aquí le doy al programa dos reglas que debe revisar al mismo tiempo: primero, que la ciudad coincida con lo que la persona escribió, y segundo, que el lugar tenga la capacidad suficiente para la cantidad de huéspedes solicitados. El programa revisa cada opción y solo aprueba y muestra los lugares que cumplen con ambas condiciones a la vez.
